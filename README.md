@@ -1,4 +1,4 @@
-# cyxbx-bms
+# cyxbs-bms
 
 ## Project setup
 ```

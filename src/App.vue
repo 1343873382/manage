@@ -1,31 +1,96 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+  <el-container class="container">
+    <el-header class="header">
+      <h1 class="title">重邮小帮手 - 后台管理</h1>
+    </el-header>
+
+    <el-container class="main-container">
+      <el-aside width="20vw" class="aside">
+        <el-menu :default-openeds="[]">
+
+          <!-- 上面三个菜单选择，示例，也可以直接修改 -->
+          <el-submenu index="1">
+            <template slot="title"><i class="el-icon-message"></i>导航一</template>
+            <el-menu-item-group>
+              <template slot="title">分组一</template>
+              <el-menu-item index="1-1">选项1</el-menu-item>
+              <el-menu-item index="1-2">选项2</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group title="分组2">
+              <el-menu-item index="1-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="1-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="1-4-1">选项4-1</el-menu-item>
+            </el-submenu>
+          </el-submenu>
+          <el-submenu index="2">
+            <template slot="title"><i class="el-icon-menu"></i>导航二</template>
+            <el-menu-item-group>
+              <template slot="title">分组一</template>
+              <el-menu-item index="2-1">选项1</el-menu-item>
+              <el-menu-item index="2-2">选项2</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group title="分组2">
+              <el-menu-item index="2-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="2-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="2-4-1">选项4-1</el-menu-item>
+            </el-submenu>
+          </el-submenu>
+          <el-submenu index="3">
+            <template slot="title"><i class="el-icon-setting"></i>导航三</template>
+            <el-menu-item-group>
+              <template slot="title">分组一</template>
+              <el-menu-item index="3-1">选项1</el-menu-item>
+              <el-menu-item index="3-2">选项2</el-menu-item>
+            </el-menu-item-group>
+            <el-menu-item-group title="分组2">
+              <el-menu-item index="3-3">选项3</el-menu-item>
+            </el-menu-item-group>
+            <el-submenu index="3-4">
+              <template slot="title">选项4</template>
+              <el-menu-item index="3-4-1">选项4-1</el-menu-item>
+            </el-submenu>
+          </el-submenu>
+
+          <!-- 项目管理的侧边栏菜单 -->
+          <el-submenu index="4">
+            <template slot="title"><i class="el-icon-setting"></i>项目管理</template>
+            <router-link to="/barrage" class="link">
+              <el-menu-item index="4-1">弹幕管理</el-menu-item>
+            </router-link>
+          </el-submenu>
+
+        </el-menu>
+      </el-aside>
+
+      <!-- 显示内容的地方 -->
+      <router-view></router-view>
+    </el-container>
+  </el-container>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<style lang="scss" scoped>
+.container {
+  height: 100vh;
 
-#nav {
-  padding: 30px;
+  .header {
+    background-color: #8cc5ff;
+    color: #333;
+    font-size: 12px;
+  }
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  .main-container {
+    overflow-y: auto;
 
-    &.router-link-exact-active {
-      color: #42b983;
+    .aside {
+      background-color: rgb(238, 241, 246);
+
+      .link {
+        text-decoration: none;
+      }
     }
   }
 }
