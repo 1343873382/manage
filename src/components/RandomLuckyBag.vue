@@ -13,7 +13,7 @@
 </template>
 
 <script>
-const API = 'https://wx.redrock.team/234/barrage/admin/barrage-lucky-bag?token=helloworld!'
+import { sendRandomLB } from '@/api'
 
 export default {
   name: 'RandomLuckyBag',
@@ -27,9 +27,7 @@ export default {
   methods: {
     async sendRandomLuckyBag() {
       try {
-        const { data } = await this.$axios.post(API, {
-          peopleNum: this.num,
-        })
+        const data = await sendRandomLB(this.num)
 
         if (data.status === 200) {
           this.$message('发送成功...')

@@ -77,7 +77,7 @@
   height: 100vh;
 
   .header {
-    background-color: #8cc5ff;
+    background-color: rgb(238, 241, 246);
     color: #333;
     font-size: 12px;
   }

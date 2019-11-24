@@ -10,7 +10,7 @@
 </template>
 
 <script>
-const API = 'https://wx.redrock.team/234/barrage/admin/blacklist/'
+import { addUserToBlackList, delUserFromBlackList } from '@/api'
 
 export default {
   name: 'User',
@@ -25,9 +25,7 @@ export default {
   methods: {
     async addToBlackList() {
       try {
-        const { data } = await this.$axios.post(API, {
-          word: this.addRedid,
-        })
+        const data = await addUserToBlackList(this.addRedid)
 
         if (data.code === 10000) {
           this.$message('ban 人成功...')
@@ -41,9 +39,7 @@ export default {
 
     async delFromBlackList() {
       try {
-        const { data } = await this.$axios.delete(API, {
-          word: this.delRedid,
-        })
+        const data = await delUserFromBlackList(this.delRedid)
 
         if (data.code === 10000) {
           this.$message('恢复成功...')

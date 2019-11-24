@@ -10,7 +10,7 @@
 </template>
 
 <script>
-const API = 'https://wx.redrock.team/234/barrage/admin/sensitive/'
+import { addSensitive, delSensitive } from '@/api'
 
 export default {
   name: 'Sensitive',
@@ -25,9 +25,7 @@ export default {
   methods: {
     async addToBlackList() {
       try {
-        const { data } = await this.$axios.post(API, {
-          word: this.addRedid,
-        })
+        const data = await addSensitive(this.addSensitive)
 
         if (data.code === 10000) {
           this.$message('添加成功...')
@@ -41,9 +39,7 @@ export default {
 
     async delFromBlackList() {
       try {
-        const { data } = await this.$axios.delete(API, {
-          word: this.delRedid,
-        })
+        const data = await delSensitive(this.delSensitive)
 
         if (data.code === 10000) {
           this.$message('移除成功...')
