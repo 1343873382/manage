@@ -6,3 +6,8 @@ export {
   sendBarrageLB,
   sendRandomLB,
 } from './barrage'
+
+export {
+  send,
+  getList,
+} from './weiXinMeun/index'

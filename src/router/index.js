@@ -36,6 +36,24 @@ const routes = [
       },
     ],
   },
+  // 微信菜单栏
+  {
+    path: '/meun',
+    name: 'wxmeun',
+    component: () => import('../views/WXMeun.vue'),
+    children: [
+      {
+        path: '/set',
+        name: 'set',
+        component: () => import('../components/wxmeun/set.vue'),
+      },
+      {
+        path: '/add',
+        name: 'add',
+        component: () => import('../components/wxmeun/add.vue'),
+      },
+    ],
+  },
 ];
 
 const router = new VueRouter({
