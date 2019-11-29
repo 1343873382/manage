@@ -7,18 +7,17 @@ const baseUrl = 'https://wx.redrock.team/magicloop/menu?token=magicloooooooooop'
 
 
 export const send = (data) => {
-  // Axios.patch(baseUrl, data, {
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  // }).then((res) => {
-  //   if (res.data.errcode === 0) {
-  //     alert('修改成功')
-  //   } else {
-  //     alert('修改失败')
-  //   }
-  // })
-  console.log(data)
+  Axios.patch(baseUrl, data, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  }).then((res) => {
+    if (res.data.errcode === 0) {
+      alert('修改成功')
+    } else {
+      alert('修改失败')
+    }
+  })
 }
 
 const copy = (obj) => {
@@ -88,9 +87,8 @@ export const getList = async (that) => {
     // eslint-disable-next-line no-param-reassign
     that.data = data
   } catch (error) {
-    console.log('err')
+    return
   }
   // eslint-disable-next-line no-param-reassign
   that.meun = that.test.button
-  console.log(that.meun)
 }

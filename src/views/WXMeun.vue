@@ -22,7 +22,8 @@
 </template>
 
 <script>
-import { getList, send } from '../api/index'
+import { getList } from '../api/index'
+// import { send } from '../api/index'
 
 export default {
   data() {
@@ -41,7 +42,7 @@ export default {
   methods: {
     sendList() {
       this.data.selfmenu_info = this.test
-      send(this.data)
+      // send(this.data)
     },
   },
 }
