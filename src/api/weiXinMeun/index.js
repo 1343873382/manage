@@ -1,4 +1,6 @@
 /* eslint-disable no-restricted-syntax */
+/* eslint-disable no-alert */
+
 import Axios from 'axios'
 import Vue from 'vue'
 

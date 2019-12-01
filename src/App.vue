@@ -13,7 +13,7 @@
             <template slot="title"><i class="el-icon-message"></i>小帮手菜单栏管理</template>
             <el-menu-item-group>
               <router-link to="/meun" class="wxHelp">
-                   <el-menu-item index="1-1">小帮手菜单栏管理</el-menu-item>
+                <el-menu-item index="1-1">小帮手菜单栏管理</el-menu-item>
               </router-link>
             </el-menu-item-group>
           </el-submenu>

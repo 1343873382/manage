@@ -22,6 +22,7 @@
     </div>
 </template>
 <script>
+/* eslint-disable no-alert */
 import { Input } from 'element-ui'
 
 export default {
