@@ -1,19 +1,16 @@
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable no-alert */
-
 import Axios from 'axios'
 import Vue from 'vue'
+
+Axios.defaults.withCredentials = true
+Axios.defaults.timeout = 1000
 
 
 const baseUrl = 'https://wx.redrock.team/magicloop/menu?token=magicloooooooooop'
 
 
 export const send = (data) => {
-  Axios.patch(baseUrl, data, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((res) => {
+  Axios.patch(baseUrl, data).then((res) => {
     if (res.data.errcode === 0) {
       alert('修改成功')
     } else {

@@ -27,6 +27,9 @@ export default {
       show: false,
     }
   },
+  mounted() {
+    console.log(this.sMeun)
+  },
   props: ['sMeun', 'id'],
   methods: {
     isShow() {
