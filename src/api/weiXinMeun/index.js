@@ -2,16 +2,15 @@
 import Axios from 'axios'
 import Vue from 'vue'
 
+Axios.defaults.withCredentials = true
+Axios.defaults.timeout = 1000
+
 
 const baseUrl = 'https://wx.redrock.team/magicloop/menu?token=magicloooooooooop'
 
 
 export const send = (data) => {
-  Axios.patch(baseUrl, data, {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  }).then((res) => {
+  Axios.patch('http://127.0.0.1:8000', data).then((res) => {
     if (res.data.errcode === 0) {
       alert('修改成功')
     } else {
@@ -86,8 +85,8 @@ export const getList = async (that) => {
     that.test = data.selfmenu_info
     // eslint-disable-next-line no-param-reassign
     that.data = data
+  // eslint-disable-next-line no-empty
   } catch (error) {
-    return
   }
   // eslint-disable-next-line no-param-reassign
   that.meun = that.test.button

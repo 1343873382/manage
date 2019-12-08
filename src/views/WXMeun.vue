@@ -22,14 +22,14 @@
 </template>
 
 <script>
-import { getList } from '../api/index'
-// import { send } from '../api/index'
+import { getList, send } from '../api/index'
+
 
 export default {
   data() {
     return {
       meun: [],
-      data: null,
+      data: {},
     }
   },
   components: {
@@ -41,8 +41,10 @@ export default {
   },
   methods: {
     sendList() {
-      this.data.selfmenu_info = this.test
-      // send(this.data)
+      if (this.data !== {}) {
+        this.data.selfmenu_info = this.test
+        send(this.data)
+      }
     },
   },
 }
