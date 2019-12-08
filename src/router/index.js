@@ -10,6 +10,21 @@ const routes = [
   //   component: Home,
   // },
   {
+    path: '/userlist',
+    name: 'userlist',
+    component: () => import(/* userList */'../views/userList.vue'),
+  },
+  {
+    path: '/usertags',
+    name: 'usertags',
+    component: () => import(/* userTags */'../views/userTags.vue'),
+  },
+  {
+    path: '/blacklist',
+    name: 'blacklist',
+    component: () => import(/* blackList */'../views/blackList.vue'),
+  },
+  {
     path: '/barrage',
     name: 'barrage',
     component: () => import(/* webpackChunkName: "BarrageManagement" */ '../views/BarrageManagement.vue'),
@@ -33,24 +48,6 @@ const routes = [
         path: '/random-lucky-bag',
         name: 'random-lucky-bag',
         component: () => import(/* webpackChunkName: "RandomLuckyBag" */ '../components/RandomLuckyBag.vue'),
-      },
-    ],
-  },
-  // 微信菜单栏
-  {
-    path: '/meun',
-    name: 'wxmeun',
-    component: () => import('../views/WXMeun.vue'),
-    children: [
-      {
-        path: '/set',
-        name: 'set',
-        component: () => import('../components/wxmeun/set.vue'),
-      },
-      {
-        path: '/add',
-        name: 'add',
-        component: () => import('../components/wxmeun/add.vue'),
       },
     ],
   },

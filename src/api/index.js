@@ -8,6 +8,5 @@ export {
 } from './barrage'
 
 export {
-  send,
-  getList,
-} from './weiXinMeun/index'
+  getUserList,
+}from './user'
