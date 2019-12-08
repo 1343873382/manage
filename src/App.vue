@@ -8,7 +8,7 @@
       <el-aside width="20vw" class="aside">
         <el-menu :default-openeds="[]">
 
-          <!-- 上面三个菜单选择，示例，也可以直接修改 -->
+          <!-- 上面2个菜单选择，示例，也可以直接修改 -->
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>导航一</template>
             <el-menu-item-group>
@@ -39,6 +39,8 @@
               <el-menu-item index="2-4-1">选项4-1</el-menu-item>
             </el-submenu>
           </el-submenu>
+
+          <!-- 用户管理 -->
           <el-submenu index="3">
             <template slot="title"><i class="el-icon-setting"></i>用户管理</template>
             <router-link to="/userlist" class="link">
@@ -52,8 +54,18 @@
             </router-link>
           </el-submenu>
 
-          <!-- 项目管理的侧边栏菜单 -->
+          <!-- 小帮手菜单栏管理 -->
           <el-submenu index="4">
+            <template slot="title"><i class="el-icon-message"></i>小帮手菜单栏管理</template>
+            <el-menu-item-group>
+              <router-link to="/meun" class="link">
+                <el-menu-item index="1-1">小帮手菜单栏管理</el-menu-item>
+              </router-link>
+            </el-menu-item-group>
+          </el-submenu>
+
+          <!-- 项目管理的侧边栏菜单 -->
+          <el-submenu index="5">
             <template slot="title"><i class="el-icon-setting"></i>项目管理</template>
             <router-link to="/barrage" class="link">
               <el-menu-item index="4-1">弹幕管理</el-menu-item>

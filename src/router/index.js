@@ -9,6 +9,27 @@ const routes = [
   //   name: 'home',
   //   component: Home,
   // },
+
+  // 微信菜单栏
+  {
+    path: '/meun',
+    name: 'wxmeun',
+    component: () => import('../views/WXMeun.vue'),
+    children: [
+      {
+        path: '/set',
+        name: 'set',
+        component: () => import('../components/wxmeun/set.vue'),
+      },
+      {
+        path: '/add',
+        name: 'add',
+        component: () => import('../components/wxmeun/add.vue'),
+      },
+    ],
+  },
+
+  // 用户管理
   {
     path: '/userlist',
     name: 'userlist',
@@ -24,6 +45,8 @@ const routes = [
     name: 'blacklist',
     component: () => import(/* blackList */'../views/blackList.vue'),
   },
+
+  // 弹幕管理
   {
     path: '/barrage',
     name: 'barrage',

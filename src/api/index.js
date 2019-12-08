@@ -10,3 +10,8 @@ export {
 export {
   getUserList,
 }from './user'
+
+export {
+  send,
+  getList,
+} from './weiXinMeun/index'
