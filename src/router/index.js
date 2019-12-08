@@ -13,17 +13,17 @@ const routes = [
     {
       path: '/meun',
       name: 'wxmeun',
-      component: () => import('..iews/WXMeun.vue'),
+      component: () => import('../views/WXMeun.vue'),
       children: [
         {
           path: '/set',
           name: 'set',
-          component: () => import('../componentsmeunt.vue'),
+          component: () => import('../components/wxmeun/set.vue'),
         },
         {
           path: '/add',
           name: 'add',
-          component: () => import('../componentsmeun/add.vue'),
+          component: () => import('../components/wxmeun/add.vue'),
         },
       ],
     },
