@@ -10,7 +10,7 @@ const baseUrl = 'https://wx.redrock.team/magicloop/menu?token=magicloooooooooop'
 
 
 export const send = (data) => {
-  Axios.patch('http://127.0.0.1:8000', data).then((res) => {
+  Axios.patch(baseUrl, data).then((res) => {
     if (res.data.errcode === 0) {
       alert('修改成功')
     } else {
