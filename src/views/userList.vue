@@ -63,6 +63,7 @@
 </template>
 
 <script>
+/* eslint-disable */
 import { getUserList } from '@/api'
 export default {
   data() {

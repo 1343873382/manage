@@ -56,7 +56,6 @@ export default {
       const { id } = this.$route.query
       const add = this.type === '1' ? { name: this.view.name, type: this.view.type, url: this.view.url } : { key: this.click.key, name: this.click.name, type: this.click.type }
 
-      console.log(add)
       if (this.check(add)) {
         this.test.button[id].sub_button.list.push(add)
         alert('添加成功')
