@@ -11,6 +11,7 @@
 
 <script>
 import { addSensitive, delSensitive } from '@/api'
+import { Message } from 'element-ui'
 
 export default {
   name: 'Sensitive',
@@ -28,12 +29,12 @@ export default {
         const data = await addSensitive(this.addSensitive)
 
         if (data.code === 10000) {
-          this.$message('添加成功...')
+          Message('添加成功...')
         } else {
-          this.$message.error('添加失败...')
+          Message.error('添加失败...')
         }
       } catch (e) {
-        this.$message.error('网络错误...')
+        Message.error('网络错误...')
       }
     },
 
@@ -42,12 +43,12 @@ export default {
         const data = await delSensitive(this.delSensitive)
 
         if (data.code === 10000) {
-          this.$message('移除成功...')
+          Message('移除成功...')
         } else {
-          this.$message.error('移除失败...')
+          Message.error('移除失败...')
         }
       } catch (e) {
-        this.$message.error('网络错误...')
+        Message.error('网络错误...')
       }
     },
   },

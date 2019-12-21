@@ -14,6 +14,7 @@
 
 <script>
 import { sendRandomLB } from '@/api'
+import { Message } from 'element-ui'
 
 export default {
   name: 'RandomLuckyBag',
@@ -30,12 +31,12 @@ export default {
         const data = await sendRandomLB(this.num)
 
         if (data.status === 200) {
-          this.$message('发送成功...')
+          Message('发送成功...')
         } else {
-          this.$message.error('发送失败...')
+          Message.error('发送失败...')
         }
       } catch (e) {
-        this.$message.error('网络错误...')
+        Message.error('网络错误...')
       }
     },
   },

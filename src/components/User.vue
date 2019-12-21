@@ -11,6 +11,7 @@
 
 <script>
 import { addUserToBlackList, delUserFromBlackList } from '@/api'
+import { Message } from 'element-ui'
 
 export default {
   name: 'User',
@@ -28,12 +29,12 @@ export default {
         const data = await addUserToBlackList(this.addRedid)
 
         if (data.code === 10000) {
-          this.$message('ban 人成功...')
+          Message('ban 人成功...')
         } else {
-          this.$message.error('ban 人失败...')
+          Message.error('ban 人失败...')
         }
       } catch (e) {
-        this.$message.error('网络错误...')
+        Message.error('网络错误...')
       }
     },
 
@@ -42,12 +43,12 @@ export default {
         const data = await delUserFromBlackList(this.delRedid)
 
         if (data.code === 10000) {
-          this.$message('恢复成功...')
+          Message('恢复成功...')
         } else {
-          this.$message.error('恢复失败...')
+          Message.error('恢复失败...')
         }
       } catch (e) {
-        this.$message.error('网络错误...')
+        Message.error('网络错误...')
       }
     },
   },

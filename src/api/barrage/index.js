@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-const API = 'http://api-234.redrock.team/barrage/admin'
+const API = 'https://wx.redrock.team/wxapi/barrage/admin'
 const USER_API = `${API}/blacklist/`
 const SENSITIVE_API = `${API}/sensitive/`
-const BARRAGE_LUCKY_BAG_API = `${API}/barrage-lucky-bag?token=helloworld!`
-const RANDOM_LUCKY_BAG_API = `${API}/random-lucky-bag?token=helloworld!`
+const BARRAGE_LUCKY_BAG_API = `${API}/barrage-lucky-bag`
+const RANDOM_LUCKY_BAG_API = `${API}/random-lucky-bag`
 
 const addUserToBlackList = async (redid) => {
   const { data } = await axios.post(USER_API, {
@@ -41,6 +41,8 @@ const delSensitive = async (word) => {
 const sendRandomLB = async (num) => {
   const { data } = await axios.post(RANDOM_LUCKY_BAG_API, {
     peopleNum: num,
+  }, {
+    headers: { 'Authorization': `Bearer helloworld!` },
   })
 
   return data
@@ -54,6 +56,8 @@ const sendBarrageLB = async (num, word, time) => {
     peopleNum: num,
     keyword: word,
     duration,
+  }, {
+    headers: { 'Authorization': `Bearer helloworld!` },
   })
 
   return data

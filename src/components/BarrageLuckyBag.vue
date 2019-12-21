@@ -28,6 +28,7 @@
 
 <script>
 import { sendBarrageLB } from '@/api'
+import { Message } from 'element-ui'
 
 export default {
   name: 'BarrageLuckyBag',
@@ -46,12 +47,12 @@ export default {
         const data = await sendBarrageLB(this.num, this.keyword, this.time)
 
         if (data.status === 200) {
-          this.$message('发送成功...')
+          Message('发送成功...')
         } else {
-          this.$message.error('发送失败...')
+          Message.error('发送失败...')
         }
       } catch (e) {
-        this.$message.error('网络错误...')
+        Message.error('网络错误...')
       }
     },
   },
