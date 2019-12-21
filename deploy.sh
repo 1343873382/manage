@@ -1,6 +1,8 @@
 #!/bin/bash
 
 # 会部署到 wx.redrock.team/game/cyxbs-bms/
+# 要把 vue.config.js 的 publicPath 改成 
+# publicPath: process.env.NODE_ENV === 'production' ? '/cyxbs-bms/' : '/',
 
 npm run build
 mv build cyxbs-bms
