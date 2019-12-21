@@ -30,7 +30,7 @@ export default {
       try {
         const data = await sendRandomLB(this.num)
 
-        if (data.status === 200) {
+        if (data.code === 10000) {
           Message('发送成功...')
         } else {
           Message.error('发送失败...')

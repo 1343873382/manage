@@ -1,8 +1,8 @@
 import axios from 'axios'
 
 const API = 'https://wx.redrock.team/wxapi/barrage/admin'
-const USER_API = `${API}/blacklist/`
-const SENSITIVE_API = `${API}/sensitive/`
+const USER_API = `${API}/blacklist`
+const SENSITIVE_API = `${API}/sensitive`
 const BARRAGE_LUCKY_BAG_API = `${API}/barrage-lucky-bag`
 const RANDOM_LUCKY_BAG_API = `${API}/random-lucky-bag`
 

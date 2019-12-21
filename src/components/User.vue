@@ -28,7 +28,7 @@ export default {
       try {
         const data = await addUserToBlackList(this.addRedid)
 
-        if (data.code === 10000) {
+        if (data.code === '10000') {
           Message('ban 人成功...')
         } else {
           Message.error('ban 人失败...')

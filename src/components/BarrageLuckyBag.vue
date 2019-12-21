@@ -46,7 +46,7 @@ export default {
       try {
         const data = await sendBarrageLB(this.num, this.keyword, this.time)
 
-        if (data.status === 200) {
+        if (data.code === '10000') {
           Message('发送成功...')
         } else {
           Message.error('发送失败...')
