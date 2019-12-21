@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = 'https://wx.redrock.team/234/barrage/admin'
+const API = 'http://api-234.redrock.team/barrage/admin'
 const USER_API = `${API}/blacklist/`
 const SENSITIVE_API = `${API}/sensitive/`
 const BARRAGE_LUCKY_BAG_API = `${API}/barrage-lucky-bag?token=helloworld!`
