@@ -6,5 +6,5 @@
 
 npm run build
 mv build cyxbs-bms
-scp -r -P 2022 cyxbs-bms root@wx.redrock.team:~/www/
+scp -r -P 2023 cyxbs-bms root@wx.redrock.team:~/www/
 rm -rf cyxbs-bms
