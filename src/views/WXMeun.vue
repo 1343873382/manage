@@ -23,7 +23,7 @@
 
 <script>
 import { getList, send } from '../api/index'
-
+import Vue from 'vue'
 
 export default {
   data() {
@@ -37,13 +37,15 @@ export default {
   },
   created() {
     const that = this
+    console.log("created")
     getList(that)
   },
   methods: {
     sendList() {
       if (this.data !== {}) {
-        this.data.selfmenu_info = this.test
-        send(this.data)
+        this.data.selfmenu_info = Vue.test
+        console.log(this.data.selfmenu_info)
+        // send(this.data)
       }
     },
   },

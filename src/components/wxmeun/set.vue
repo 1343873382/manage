@@ -23,12 +23,13 @@
 </template>
 <script>
 import { Input } from 'element-ui'
-
+import Vue from "vue"
 export default {
   data() {
     return {
       set: {},
       type: '',
+      test:Vue.test
     }
   },
   computed: {

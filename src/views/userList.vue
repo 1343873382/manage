@@ -317,13 +317,13 @@ export default {
     };
   },
   created() {
-    getUserList.then(res => {
-      this.tableData = res.data
-      console.log(res.data)
-    }).catch(err => {
-      console.log(err)
-    })
-    // console.log(this.tableData)
+    // getUserList.then(res => {
+    //   this.tableData = res.data
+    //   console.log(res.data)
+    // }).catch(err => {
+    //   console.log(err)
+    // })
+    // // console.log(this.tableData)
     console.log('https://easy-mock.com 用这个mock的接口，这个网址访问不是很稳定,可访问时已测试成功')
   },
   beforeMount() {},

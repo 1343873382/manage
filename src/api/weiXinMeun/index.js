@@ -2,7 +2,7 @@
 import Axios from 'axios'
 import Vue from 'vue'
 
-Axios.defaults.withCredentials = true
+// Axios.defaults.withCredentials = true
 Axios.defaults.timeout = 1000
 
 
@@ -21,9 +21,6 @@ export const send = (data) => {
 
 const copy = (obj) => {
   const newObj = {}
-  // eslint-disable-next-line guard-for-in
-  // eslint-disable-next-line no-restricted-syntax
-  // eslint-disable-next-line guard-for-in
   for (const item in obj) {
     newObj[item] = obj[item]
   }
@@ -40,54 +37,28 @@ const check = (obj) => {
   }
   return true
 }
+Vue.prototype.test = null
 
-const initMeun = () => {
-  Vue.prototype.copy = copy
-  Vue.prototype.check = check
-  Vue.prototype.test = {
-    button: [
-      {
-        type: 'click',
-        name: '今日歌曲',
-        key: 'V1001_TODAY_MUSIC',
-      },
-      {
-        name: '菜单',
-        sub_button: {
-          list: [
-            {
-              type: 'view',
-              name: '搜索',
-              url: 'http://www.soso.com/',
-            },
-            {
-              type: 'view',
-              name: '视频',
-              url: 'http://v.qq.com/',
-            },
-            {
-              type: 'click',
-              name: '赞一下我们',
-              key: 'V1001_GOOD',
-            },
-          ],
-        },
-      },
-    ],
-  }
-}
+
+Vue.prototype.copy = copy
+Vue.prototype.check = check
+
 
 export const getList = async (that) => {
-  initMeun()
   try {
-    const { data } = await Axios.get(baseUrl)
+    const { data } = await Axios.get(baseUrl , {
+      headers:{
+        'Content-Type': 'application/json',
+      }
+    })
     // eslint-disable-next-line no-param-reassign
-    that.test = data.selfmenu_info
+    Vue.test = data.selfmenu_info
     // eslint-disable-next-line no-param-reassign
     that.data = data
   } catch (error) {
+    console.error(error)
     return
   }
   // eslint-disable-next-line no-param-reassign
-  that.meun = that.test.button
+  that.meun = Vue.test.button
 }

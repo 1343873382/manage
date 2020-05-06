@@ -3,7 +3,7 @@
     <slot></slot>
     <div
     class="btns"
-    v-show=" show  && test.button[id]['sub_button']"
+    v-show=" show"
     >
     <router-link
     :to="{name : 'add' , query : {'id' : id}}"
@@ -68,7 +68,7 @@ li{
      }
      .btns{
          font-size: 20px;
-         max-width: 150px;
+         min-width: 150px;
          min-height:50px;
          background-color:  #c2c2c2;
          position: absolute;
@@ -85,7 +85,7 @@ li{
              left: 20px;
          }
          a{
-             font-size: 18px;
+             font-size: 16px;
              line-height:2.6em;
              margin: 0   .5em;
              display: block;

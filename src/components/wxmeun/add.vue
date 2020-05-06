@@ -30,7 +30,7 @@
 
 <script>
 import { radio, Input } from 'element-ui'
-
+import Vue from 'vue'
 export default {
   data() {
     return {
@@ -57,7 +57,8 @@ export default {
       const add = this.type === '1' ? { name: this.view.name, type: this.view.type, url: this.view.url } : { key: this.click.key, name: this.click.name, type: this.click.type }
 
       if (this.check(add)) {
-        this.test.button[id].sub_button.list.push(add)
+        console.log(Vue.test)
+        Vue.test.button[id].sub_button.list.push(add)
         alert('添加成功')
         this.$router.push({ path: '/meun' })
       } else {
