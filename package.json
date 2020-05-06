@@ -39,5 +39,6 @@
       "vue-cli-service lint",
       "git add"
     ]
-  }
+  },
+  "proxy": "https://wx.redrock.team/magicloop/"
 }
