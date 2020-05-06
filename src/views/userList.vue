@@ -324,7 +324,7 @@ export default {
     //   console.log(err)
     // })
     // // console.log(this.tableData)
-    console.log('https://easy-mock.com 用这个mock的接口，这个网址访问不是很稳定,可访问时已测试成功')
+    // console.log('https://easy-mock.com 用这个mock的接口，这个网址访问不是很稳定,可访问时已测试成功')
   },
   beforeMount() {},
   mounted() {
@@ -341,7 +341,7 @@ export default {
   methods: {
     handleCurrentChange(val) {
       this.currentPage = val;
-      console.log(`当前页: ${val}`);
+      // console.log(`当前页: ${val}`);
       this.start = (this.currentPage - 1) * this.pageSize + 1;
       this.end = this.currentPage * this.pageSize;
 
