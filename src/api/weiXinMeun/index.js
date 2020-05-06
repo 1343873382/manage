@@ -56,7 +56,6 @@ export const getList = async (that) => {
     // eslint-disable-next-line no-param-reassign
     that.data = data
   } catch (error) {
-    console.error(error)
     return
   }
   // eslint-disable-next-line no-param-reassign
