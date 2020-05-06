@@ -37,15 +37,13 @@ export default {
   },
   created() {
     const that = this
-    console.log("created")
     getList(that)
   },
   methods: {
     sendList() {
       if (this.data !== {}) {
         this.data.selfmenu_info = Vue.test
-        console.log(this.data.selfmenu_info)
-        // send(this.data)
+        send(this.data)
       }
     },
   },
