@@ -1,25 +1,26 @@
 import Vue from 'vue'
 import {
-  Container,
-  Aside,
-  Menu,
-  Submenu,
-  MenuItemGroup,
-  MenuItem,
-  Header,
-  Main,
-  Input,
-  Button,
-  Message,
-  InputNumber,
-  TimeSelect,
-  Table,
-  TableColumn,
-  Pagination,
-  Image,
-  Form,
-  FormItem,
-  Tag,
+    Container,
+    Aside,
+    Menu,
+    Submenu,
+    MenuItemGroup,
+    MenuItem,
+    Header,
+    Main,
+    Input,
+    Button,
+    Message,
+    InputNumber,
+    TimeSelect,
+    Table,
+    TableColumn,
+    Pagination,
+    Image,
+    Form,
+    FormItem,
+    Tag,
+
 } from 'element-ui'
 
 Vue.use(Container)
@@ -42,4 +43,3 @@ Vue.use(Image)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Tag)
-
