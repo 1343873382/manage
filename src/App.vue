@@ -65,6 +65,13 @@
               <el-menu-item index="4-1">弹幕管理</el-menu-item>
             </router-link>
           </el-submenu>
+          <!-- 消息管理 -->
+          <el-submenu index="6">
+            <template slot="title"><i class="el-icon-setting"></i>消息管理</template>
+            <router-link to="/information" class="link">
+              <el-menu-item >自动回复</el-menu-item>
+            </router-link>
+          </el-submenu>
 
         </el-menu>
       </el-aside>
