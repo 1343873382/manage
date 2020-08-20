@@ -43,3 +43,4 @@ Vue.use(Image)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Tag)
+Vue.prototype.$message = Message

@@ -8,15 +8,16 @@
     <el-form-item prop="password" >
     <el-input v-model="loginForm.password"  placeholder="请输入密码"></el-input>
    </el-form-item>
-  <el-row class="button">
-  <el-button type="primary">登录</el-button>
+  <el-form-item class="button">
+  <el-button type="primary" @click="login">登录</el-button>
   <el-button type="primary" @click="resetLoginForm">重置</el-button>
-</el-row>
+</el-form-item>
            </el-form>
         </div>
     </div>
 </template>
 <script>
+import qs from "qs"
 export default {
    data() {
        return {
@@ -30,8 +31,24 @@ export default {
    methods: {
        resetLoginForm(){
           this.$refs.loginFormRef.resetFields();
+       },
+       async login(){
+        const {data:res} = await this.$http({
+        method: "post",
+        url: "/login",
+        data: qs.stringify(this.loginForm),
+       
+      })
+      console.log(res);
+      if (res.status !== 10000) return this.$message.error('登陆失败')
+      this.$message.success('登录成功')
+      this.$router.push('/home')
+    
+      
        }   
-      },
+
+      }
+     
 }
 </script>
 <style  scoped>
