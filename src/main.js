@@ -8,12 +8,12 @@ import axios from 'axios'
 
 const ins = axios.create({
     baseURL: '/api',
-    timeout: 1000
+    // timeout: 1000
 })
 Vue.prototype.$http = ins
 
 
-Vue.config.productionTip = false
+//Vue.config.productionTip = false
 
 new Vue({
     router,

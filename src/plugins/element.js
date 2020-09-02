@@ -20,6 +20,10 @@ import {
     Form,
     FormItem,
     Tag,
+    Card,
+    Switch,
+    Popover,
+    Dialog,
 
 } from 'element-ui'
 
@@ -43,4 +47,9 @@ Vue.use(Image)
 Vue.use(Form)
 Vue.use(FormItem)
 Vue.use(Tag)
+Vue.use(Card)
+Vue.use(Switch)
+Vue.use(Popover)
+Vue.use(Dialog)
+
 Vue.prototype.$message = Message

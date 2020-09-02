@@ -96,6 +96,21 @@ const routes = [
                     },
                 ],
             },
+            {
+                path: '/information',
+                name: 'information',
+                component: () =>
+                    import ('../views/information.vue'),
+                children: [
+
+                    {
+                        path: '/keywords',
+                        name: 'keywords',
+                        component: () =>
+                            import ( /* webpackChunkName: "User" */ '../components/reply/keywords.vue'),
+                    }
+                ]
+            }
         ]
     },
 
